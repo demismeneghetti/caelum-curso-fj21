@@ -3,8 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <body>
-    Contato ${param.nome} adicionado com sucesso
-	<br/>
-    <a href="http://localhost:8080/caelum-curso-fj21/index.html">Home</a>
+    <h1> Página da nossa primeira lógica </h1>
   </body>
 </html>
