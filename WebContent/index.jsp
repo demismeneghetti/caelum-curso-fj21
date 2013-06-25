@@ -14,13 +14,13 @@
 	</head>
 	<body>
 		Primeira pagina do projeto caelum-curso-FJ21
-		</br>
-		</br>
+		<br />
+		<br />
 		<a href="http://localhost:8080/caelum-curso-fj21/adiciona-contato.jsp"> - Adicionar contato</a>
-		</br>
+		<br />
 		<a href="http://localhost:8080/caelum-curso-fj21/altera-contato.jsp"> - Altera contato</a>
-		</br>
-		<a href="http://localhost:8080/caelum-curso-fj21/lista-contatos-elegante.jsp"> - Lista contatos</a>
+		<br />
+		<a href="http://localhost:8080/caelum-curso-fj21/lista-contatos.jsp"> - Lista contatos</a>
 	</body>
 </html>
 

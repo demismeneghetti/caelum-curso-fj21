@@ -10,6 +10,8 @@
 	</head>
 	<body>
 		<c:import url="cabecalho.jsp" />
+			Formulário para inclusão de contatos:<br/>
+        
 			<form action="adicionaContato">
 				Nome: <input type="text" name="nome" /><br />
 				E-mail: <input type="text" name="email" /><br />
