@@ -20,8 +20,7 @@
                 <input type="text" name="endereco"/><br/>
             Data de Nascimento: 
                 <caelum:campoData id="dataNascimento" />
-  <input type="hidden"
-                  name="logica" value="AlteraContatoLogic"/>
-                <input type="submit" value="Enviar"/>
+  				<input type="hidden" name="logica" value="AlteraContatoLogic"/>
+                <input type="submit" value="Alterar"/>
         </form>
 <c:import url="rodape.jsp" />

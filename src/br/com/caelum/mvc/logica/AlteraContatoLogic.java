@@ -13,7 +13,21 @@ import br.com.caelum.agenda.modelo.Contato;
 
 public class AlteraContatoLogic implements Logica {
 
-    public void executa(HttpServletRequest request,
+	public String executa(req, res){
+		Long id = Long.parseLong(textoId);
+		
+		Contato c = new Contato();
+		c.setId(id);
+		
+		ContatoDao dao = new ContatoDao();
+		dao.atualiza(c);
+		
+		RequestDispatcher rd  = req.getRequestD
+		
+		
+	}
+	
+	public void executa(HttpServletRequest request,
             HttpServletResponse response)
             throws Exception {
             
