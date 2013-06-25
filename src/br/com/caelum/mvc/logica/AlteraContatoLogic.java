@@ -12,51 +12,31 @@ import br.com.caelum.agenda.dao.ContatoDao;
 import br.com.caelum.agenda.modelo.Contato;
 
 public class AlteraContatoLogic implements Logica {
+	@Override
+	public void executa(HttpServletRequest req, HttpServletResponse res)
+			throws Exception {
+		Contato contato = new Contato();
 
-	public String executa(req, res){
-		Long id = Long.parseLong(textoId);
-		
-		Contato c = new Contato();
-		c.setId(id);
-		
+		String id = req.getParameter("id");
+		contato.setId(Long.parseLong(id));
+
+		contato.setNome(req.getParameter("nome"));
+		contato.setEndereco(req.getParameter("endereco"));
+		contato.setEmail(req.getParameter("email"));
+
+		// Converte a data de string para calendar
+		String dataEmTexto = req.getParameter("dataNascimento");
+		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+		Calendar dataNascimento = Calendar.getInstance();
+		dataNascimento.setTime(date);
+		contato.setDataNascimento(dataNascimento);
+
 		ContatoDao dao = new ContatoDao();
-		dao.atualiza(c);
-		
-		RequestDispatcher rd  = req.getRequestD
-		
-		
+		dao.atualiza(contato);
+
+		RequestDispatcher rd = req
+				.getRequestDispatcher("/lista-contatos-elegante.jsp");
+		rd.forward(req, res);
+
 	}
-	
-	public void executa(HttpServletRequest request,
-            HttpServletResponse response)
-            throws Exception {
-            
-        Contato contato = new Contato();
-        long id = Long.parseLong(request
-                .getParameter("id"));
-        contato.setId(id);
-        contato.setNome(request.getParameter("nome"));
-        contato.setEndereco(request
-                .getParameter("endereco"));
-        contato.setEmail(request.getParameter("email"));
-
-        //Converte a data de String para Calendar          
-        String dataEmTexto = request
-                .getParameter("dataNascimento");
-        Date date = new SimpleDateFormat("dd/MM/yyyy")
-                .parse(dataEmTexto);
-        Calendar dataNascimento = Calendar.getInstance();
-        dataNascimento.setTime(date);
-        
-        contato.setDataNascimento(dataNascimento);
-        
-        ContatoDao dao = new ContatoDao();
-        dao.atualiza(contato);
-
-        RequestDispatcher rd = request
-                .getRequestDispatcher("/lista-contatos-elegante.jsp");
-        rd.forward(request, response);
-        System.out.println("Alterando contato ..." +
-                contato.getNome());
-    }
 }
