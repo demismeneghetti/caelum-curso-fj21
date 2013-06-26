@@ -5,6 +5,6 @@
   <body>
     Contato ${param.nome} adicionado com sucesso
 	<br/>
-    <a href="http://localhost:8080/caelum-curso-fj21/index.html">Home</a>
+    <a href="http://localhost:8080/caelum-curso-fj21/index.jsp">Home</a>
   </body>
 </html>

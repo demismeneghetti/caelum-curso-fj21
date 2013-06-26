@@ -35,7 +35,7 @@ public class AlteraContatoLogic implements Logica {
 		dao.atualiza(contato);
 
 		RequestDispatcher rd = req
-				.getRequestDispatcher("/lista-contatos-elegante.jsp");
+				.getRequestDispatcher("/lista-contatos.jsp");
 		rd.forward(req, res);
 
 	}

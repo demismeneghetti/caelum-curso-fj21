@@ -13,7 +13,6 @@
 		<c:import url="cabecalho.jsp"></c:import>
 		<!--cria o DAO-->
 		<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao"/>
-			<hr>
 				<table>
 					<c:forEach var="contato" items="${dao.lista }">
 						<tr>
@@ -32,11 +31,8 @@
 							<td>
 							<a href="mvc?logica=RemoveContatoLogic&id=${contato.id}">Remover contato</a>
 							</td>
-							
 					</c:forEach>
-					
 				</table>
-			<hr>
 		<c:import url="rodape.jsp"></c:import>
 	</body>
 </html>

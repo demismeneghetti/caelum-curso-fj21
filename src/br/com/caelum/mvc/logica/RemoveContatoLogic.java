@@ -25,7 +25,7 @@ public class RemoveContatoLogic implements Logica {
 				.getRequestDispatcher("/lista-contatos.jsp");
 		rd.forward(req, res);
 
-		System.out.println("removendo contato ...." + contato.getNome());
+		System.out.println("Removendo contato... " + contato.getId());
 
 	}
 
